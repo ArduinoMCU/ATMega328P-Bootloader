@@ -8,7 +8,7 @@ OBJ = bootloader.o uart.o
 all: bootloader.hex
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) -c $< -o $@
 
 bootloader.elf: $(OBJ)
 	$(CC) $(CFLAGS) -Wl,--section-start=.text=0x7000 -o bootloader.elf $(OBJ)
