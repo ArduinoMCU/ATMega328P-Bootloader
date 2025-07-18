@@ -1,7 +1,7 @@
 CC = avr-gcc
 CFLAGS = -Wall -Os -mmcu=atmega328p
 OBJCOPY = avr-objcopy
-
+# Define the object files for the bootloader
 OBJ = bootloader.o uart.o
 
 
